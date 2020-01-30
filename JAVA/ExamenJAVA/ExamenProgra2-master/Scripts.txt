@@ -1,0 +1,43 @@
+-- Table: public.compras
+
+-- DROP TABLE public.compras;
+
+CREATE TABLE public.compras
+(
+    nombre character varying COLLATE pg_catalog."default" NOT NULL,
+    edad integer,
+    sexo character varying COLLATE pg_catalog."default",
+    id_producto integer,
+    fecha date
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.compras
+    OWNER to postgres;
+
+
+-- Table: public.productos
+
+-- DROP TABLE public.productos;
+
+CREATE TABLE public.productos
+(
+    id integer NOT NULL,
+    nombre character varying COLLATE pg_catalog."default" NOT NULL,
+    precio integer,
+    tipo integer,
+    CONSTRAINT "Productos_pkey" PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.productos
+    OWNER to postgres;
+
+
+
