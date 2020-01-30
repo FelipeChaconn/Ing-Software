@@ -1,0 +1,71 @@
+.footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+ }
+ /* import fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap');
+:root{
+    --light-gray:#2b3032a1;
+
+    --primary-color:#046b5c;
+    --border:#2b303218;
+    --text-color:#ff686b;
+    --roboto:"Roboto",sans-serif;
+    --gugi:"Gugi",cursive;
+    --sofia:"Sofia",cursive;
+}
+
+.primary-color{
+   color:var(--primary-color);
+}
+.bg-primary-color{
+   background-color: var(--primary-color)!important;
+}
+.text-color{
+   color:var(--text-color);
+}
+.font-roboto{
+   font-family: var(--roboto);
+}
+.white{
+   color: whitesmoke;
+}
+.lightblue{
+   color: lightblue;
+}
+
+/*Header*/
+header{
+   background-color: var(--primary-color);
+   font-family: var(--roboto);
+}
+/*Navigation var*/
+.navbar-nav{
+   padding: 0.8em 0 em;
+}
+.navbar-nav .nav-link{
+   font-size: 0.9em;
+   color: var(--light-gray)!important;
+}
+.carousel-caption  p{
+ 
+   color: black!important;
+}
+.carousel-caption h3{
+   font-family: var(--gugi);
+   color: black!important;
+}
+.title{
+    font-family: var(--roboto);
+}
+.card-deck{
+   margin: 5% !important;
+}
+#imgShow{
+   width: 250px;
+   height: 250px;
+}

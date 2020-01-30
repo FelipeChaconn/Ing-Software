@@ -1,0 +1,2 @@
+/*First Slider */
+$('.carousel').carousel()

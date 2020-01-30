@@ -1,0 +1,171 @@
+/* import fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap');
+ :root{
+     --light-gray:#2b3032a1;
+
+     --primary-color:#046b5c;
+     --border:#2b303218;
+     --text-color:#ff686b;
+     --roboto:"Roboto",sans-serif;
+     --gugi:"Gugi",cursive;
+     --sofia:"Sofia",cursive;
+ }
+
+.primary-color{
+    color:var(--primary-color);
+}
+.bg-primary-color{
+    background-color: var(--primary-color)!important;
+}
+.text-color{
+    color:var(--text-color);
+}
+.font-roboto{
+    font-family: var(--roboto);
+}
+.white{
+    color: whitesmoke;
+}
+.lightblue{
+    color: lightblue;
+}
+
+/*Header*/
+header{
+    background-color: var(--primary-color);
+    font-family: var(--roboto);
+}
+/*Navigation var*/
+.navbar-nav{
+    padding: 0.8em 0 em;
+}
+.navbar-nav .nav-link{
+    font-size: 0.9em;
+    color: var(--light-gray)!important;
+}
+.carousel-caption  p{
+  
+    color: black!important;
+}
+.carousel-caption h3{
+    font-family: var(--gugi);
+    color: black!important;
+}
+header .link-icons {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+header .link-icons a {
+	text-decoration: none;
+	color: #394352;
+	padding: 0 10px;
+}
+header .link-icons a:hover {
+	color: #4e5c70;
+}
+header .link-icons a i {
+	font-size: 18px;
+}
+header .link-icons a span {
+	display: inline-block;
+	text-align: center;
+	background-color: #63748e;
+	border-radius: 50%;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-weight: bold;
+	position: absolute;
+	top: 22px;
+	right: 0;
+}
+main .cart table {
+	width: 100%;
+}
+main .cart table thead td {
+	padding: 30px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+main .cart table thead td:last-child {
+	text-align: right;
+}
+main .cart table tbody td {
+	padding: 20px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+main .cart table tbody td:last-child {
+	text-align: right;
+}
+main .cart table .img {
+	width: 80px;
+}
+main .cart table .remove {
+	color: #777777;
+	font-size: 12px;
+	padding-top: 3px;
+}
+main .cart table .remove:hover {
+	text-decoration: underline;
+}
+main .cart table .price {
+	color: #999999;
+}
+main .cart table a {
+	text-decoration: none;
+	color: #555555;
+}
+main .cart table input[type="number"] {
+	width: 68px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	color: #555555;
+	border-radius: 5px;
+}
+main .cart .subtotal {
+	text-align: right;
+	padding: 40px 0;
+}
+main .cart .subtotal .text {
+	padding-right: 40px;
+	font-size: 18px;
+}
+main .cart .subtotal .price {
+	font-size: 18px;
+	color: #999999;
+}
+main .cart .buttons {
+	text-align: right;
+	padding-bottom: 40px;
+}
+main .cart .buttons input[type="submit"] {
+	margin-left: 5px;
+	padding: 12px 20px;
+	border: 0;
+	background: #4e5c70;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+main .cart .buttons input[type="submit"]:hover {
+	background: #434f61;
+}
+main .placeorder h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+main .placeorder p {
+	text-align: center;
+}

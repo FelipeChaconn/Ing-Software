@@ -1,0 +1,11 @@
+
+
+Eliminar codigo html category view
+
+Extender solo un sql_connection para todas las categorias
+
+Mostrar error en el login 
+
+
+
+
