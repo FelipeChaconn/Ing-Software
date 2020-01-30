@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="shortcut icon" href="images/logorRide.png" />
+<head>
+	<meta charset="utf-8">
+	<title>Ride Now</title>
+</head>
+<body>
+	  <div id= "link">
+      <div class="wrapper">
+          <marquee behavior="alternate"><h1  class="marquee">Ride Now</h1></marquee>
+          <p>¿You would need a 'ride'?</p>
+
+            <p>You are in the correct Site!
+          <a id="myLink" href="#" onclick="document.getElementById('idModalRegister').style.display='block'";return false;">"START NOW"</a> </p>
+      </div>
+    </div>
+    	 <div id="idModalRegister" class="modal">
+         <form class="modal-content animate" action="Dashboard.html">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('idModalRegister').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="images/logorRide.png"  alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="uname"><b>First Name</b></label>
+                  <input type="text" placeholder="Juanito " name="uname" required>
+                <label for="uname"><b>Last Name</b></label>
+                  <input type="text" placeholder="Perez Rojas" name="uname" required>
+                <label for="uname"><b>Telephone</b></label>
+                  <input type="text" placeholder="8888-8888" name="uname" required>
+                <label for="uname"><b>User</b></label>
+                  <input type="text" placeholder="Clark Kent" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw" required>
+                    <button type="submit">Submit</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container containerModalButtons">
+                <button type="button" onclick="document.getElementById('idModalRegister').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">I already have account! <a id="myLink" href="#" onclick="document.getElementById('idModalRegister').style.display='none';document.getElementById('idModalLogin').style.display='block';return false;">Login</a></span>
+            </div>
+         </form>
+       </div>
+        <script>
+         // Obtiene el modal
+            var modal = document.getElementById('idModalRegister');
+    // Si el usuario le da click todo el resto se cierra
+            window.onclick = function(event) {
+             if (event.target == modal) {
+            modal.style.display = "none";
+                                        }
+                                              }
+        </script>
+
+
+  <div class= login>
+    <div id="idModalLogin" class="modal">
+        <form class="modal-content animate" action="Dashboard.html">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('idModalLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="images/logorRide.png"  alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Clark Kent" name="uname" required>
+              <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+            <div class="container containerModalButtons" >
+              <button type="button" onclick="document.getElementById('idModalLogin').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <script>
+      // Se obtiene el modal del login
+      var modal = document.getElementById('idModalLogin');
+      //cuando el usuario le da click todo lo de afuera se cierra
+       window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  </div>
+</body>
+</html>

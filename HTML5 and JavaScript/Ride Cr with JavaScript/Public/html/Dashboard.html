@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ride CR</title>
+    <!--Import Google Icon Font-->
+    <script defer src="https://kit.fontawesome.com/58af6c561f.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../style/shared.css"/>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../style/dashboard.css"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body id="dashboard">
+    <div class="navbar-fixed">
+      <nav class="teal">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#home" class="brand-logo">Rides CR</a>
+            <a href="#" data-target="mobile-nav"
+              class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href=""><i class="material-icons">home</i></a>
+              </li>
+              <li>
+                <a   href="settings.html">Settings</a>
+              </li>
+              <li>
+                <a class='dropdown-trigger' href='#' data-target='dropdownbar'><i class="material-icons">account_circle</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <ul id='dropdownbar' class='dropdown-content'>
+      <li id="user_name"><a><i class="material-icons" >account_circle</i>User</a></li>
+      <li><a onclick="logout()"><i class="material-icons">exit_to_app</i>LogOut</a></li>
+    </ul>
+    <!-- Section mobile nav-->
+    <ul class="sidenav" id="mobile-nav">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      
+      <li>
+        <a href="settings.html">Settings</a>
+      </li>
+      
+    </ul>
+    <!--Section My Rides -->
+    <section class="myrides section  teal
+      darken-1 white-text center">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel teal white-text center">
+              <h4>My Rides</h4>
+              <div align="right" class="add_ride">
+                <a href="#add_rides"  class="modal-trigger"><i class="material-icons  icon-white small">add</i></a>
+              </div>
+              <table class="table highlight">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Start from:</th>
+                    <th>End to:</th>
+                    <th>Date:</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody  id="rides_table">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section google maps -->
+    <section class="mapSection darken-2 white-text center" >
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h3>Ubication</h3>
+            <div id="googleMap"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal ADD RIDE -->
+    <div id="add_rides" class="modal">
+      <a class="modal-close waves-effect waves-green btn-flat"><i class="material-icons Tiny">close</i></a>
+      <!-- Content-->
+      <div class="modal-content center">
+        <div class="modal-header">
+          <h3 >Add new Ride</h3>
+        </div>
+        <div class="modal-body">
+          <form role="form" id="add_rides-form" >
+            <div class="input-field">
+              <i class="material-icons prefix">directions_car</i>
+              <input type="text" name="namein" id="name_input">
+              <label for="name_input">Name:</label>
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">directions</i>
+              <input type="text" name="startTo" id="start_input">
+              <label for="start_input">Start from:</label>
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">done</i>
+              <input type="text" name="endTo" id="end_input">
+              <label for="end_input">End to:</label>
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">description</i>
+              <textarea class="materialize-textarea" name="description" id="description_input"></textarea>
+              <label for="description_input">Description</label>
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">date_range</i>
+              <input type = "text"  id="date_input"class = "datepicker" />
+              <label for="date_input">Date</label>
+            </div><br>
+            <input  id="add-ride-button" type="button" value="Register"  class="btn btn-large">
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+    <!-- Modal Edit RIDE -->
+    <div id="edit_rides" class="modal">
+      <a class="modal-close waves-effect waves-green btn-flat"><i class="material-icons Tiny">close</i></a>
+      <!-- Content-->
+      <div class="modal-content center">
+        <div class="modal-header">
+          <h3 >Edit Ride</h3>
+        </div>
+        <div class="modal-body">
+          <form role="form" id="edit_rides-form" >
+            <div class="input-field">
+              <i class="material-icons prefix">directions_car</i>
+              <input type="text" name="namein" id="name_edit">
+              
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">directions</i>
+              <input type="text" name="startTo" id="start_edit">
+              
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">done</i>
+              <input type="text" name="endTo" id="end_edit">
+              
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">description</i>
+              <textarea class="materialize-textarea" name="description" id="description_edit"></textarea>
+              
+            </div><br>
+            <div class="input-field">
+              <i class="material-icons prefix">date_range</i>
+              <input type = "text"  id="date_edit"class = "datepicker" />
+              
+            </div><br>
+            <input type="hidden" name="id" value="" id="editId" />
+            <input  id="edit-ride-button" type="button" value="Save"  class="btn btn-large">
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../scripts/template.js" type="text/javascript"></script>
+    <script src="../scripts/dashboard.js" type="text/javascript"></script>
+    <script src="../scripts/database.js" type="text/javascript"></script>
+    <script src="../scripts/shared.js" type="text/javascript"></script>
+     <script
+    src="https://maps.googleapis.com/maps/api/js?key=GoogleApiCode&callback=initMap" >
+    </script>
+    <script type="text/javascript">
+    loadTableData('rides');
+    bindEvents();
+    </script>
+  </body>
+</html>

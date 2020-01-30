@@ -1,0 +1,29 @@
+.section-search input[type=text]{
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 90% !important;
+    border: #f4f4f4 3px solid !important;
+}
+.section-follow .fa-4x {
+    margin: 5px 10 px;
+
+}
+.modal-close{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+}
+.section-slider{
+    width: 100%;
+}
+#showData{
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 40%;
+  width: 35%;
+  will-change: top, opacity;
+}
